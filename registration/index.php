@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <Title>Registration Form</Title>
 <style type="text/css">
     body { background-color: #fff; border-top: solid 10px #000;
