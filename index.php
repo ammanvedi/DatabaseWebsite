@@ -9,7 +9,7 @@
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       Email <input type="text" name="email" id="email"/></br>
-      Company Name <input type="text" name="Company Name" id="companyname"/> </br>
+      Company Name <input type="text" name="company" id="company"/> </br>
       <input type="submit" name="submit" value="Submit" />
 </form>
 <?php
@@ -33,10 +33,10 @@
     try {
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $company = $_POST('companyname')
+        $company = $_POST('company')
         $date = date("Y-m-d");
         // Insert data
-        $sql_insert = "INSERT INTO registration_tbl (name, email, date, companyname) 
+        $sql_insert = "INSERT INTO registration_tbl (name, email, date, company)
                    VALUES (?,?,?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $name);
