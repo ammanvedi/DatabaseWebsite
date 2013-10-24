@@ -9,6 +9,9 @@
 
 
 <?php
+
+//connect to the sql database 
+//this method is done without PDO
    
     try {
 
@@ -21,34 +24,23 @@
 
 
 
-    // Insert registration info
+    // get the query passed from the form in index.php
     $query = $_GET['query'];
-   // $raw_results = mysql_query("SELECT * FROM registration_tbl WHERE name={$query}");
-
-     $raw_results = mysql_query("SELECT * FROM registration_tbl
+    //execute query using php
+    $raw_results = mysql_query("SELECT * FROM registration_tbl
             WHERE (`name` LIKE '%".$query."%') OR (`email` LIKE '%".$query."%')") or die(mysql_error());
 
-    //debug 
-    //$raw_results = mysql_query("SELECT * FROM registration_tbl");
 
-
-    // Retrieve data
-   if(mysql_num_rows($raw_results) > 0){ // if one or more rows are returned do following
+   if(mysql_num_rows($raw_results) > 0){ 
              
             while($results = mysql_fetch_array($raw_results)){
-            // $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
              
                 echo "<p><h3>".$results['name']."</h3>".$results['email']."</p>";
-                // posts results gotten from database(title and text) you can also show id ($results['id'])
             }
              
         }
-        else{ // if there is no matching rows do following
-            echo "No results";
-            if($query = NULL){
-                echo "NULL";
-            }
-            print $query;
+        else{ // condition for no results returned
+            echo "No results, nothing to show";
         }
          
     
