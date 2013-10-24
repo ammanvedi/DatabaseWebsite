@@ -6,6 +6,13 @@
 </head>
 <body>
 <h1>Register here!!!!!!!!</h1>
+
+
+<form class="searchform" action="search.php" method="GET">
+        <input class="searchbox" type="text" name="query" />
+        <input class="submitbutton" type="submit" value="Search" />
+    </form>
+
 <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
@@ -75,10 +82,6 @@
 ?>
 
 
-<form class="searchform" action="search.php" method="GET">
-        <input type="text" name="query" />
-        <input type="submit" value="Search" />
-    </form>
 
 
 </body>
