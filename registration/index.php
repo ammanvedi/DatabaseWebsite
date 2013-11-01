@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<Title>Registration Form</Title>
+<Title>Registration Page</Title>
 
 </head>
 <body>
