@@ -22,6 +22,8 @@
         die(var_dump($e));
     }
 
+    
+
 
 
     // get the query passed from the form in index.php
