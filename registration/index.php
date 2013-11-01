@@ -5,7 +5,7 @@
 
 </head>
 <body>
-<h1>Register for an account below</h1>
+<h1>Register for an account below!!!!!!!!</h1>
 
 
 <form class="searchform" action="search.php" method="GET">
