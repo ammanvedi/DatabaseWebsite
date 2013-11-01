@@ -35,7 +35,8 @@
              
             while($results = mysql_fetch_array($raw_results)){
              
-                echo "<p><h3>".$results['name']."</h3>".$results['email']."</p>";
+                echo "<p>".$results['name']."<br/>".$results['email']."<br/>"
+                .$results['date']."<br/>".$results['company']."</p>";
             }
              
         }
